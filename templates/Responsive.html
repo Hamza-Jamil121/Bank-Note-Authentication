@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
+<title>Bank-Note-Authentication</title>
+<style>
+body {
+  font-family: Arial;
+}
+
+background-color:#f4511e;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left:340px;
+}
+
+
+
+div.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.header{
+    background-color: #f4511e;
+    padding: 12px 12px;
+    margin-bottom: 38px; 
+}
+.header h3{
+color: white;
+ 
+    line-height: 1.375em;
+    
+    font-weight: bolder;
+	text-align:center;
+	padding-top:20px;
+}
+.header p{
+color: white;
+padding-right: 10px;
+    text-align: center;
+    padding-left: 10px;
+    font-weight: bold;
+ 
+}
+.footer{
+background-color:#f4511e;
+margin-top:10px;
+height:80px;
+text-align: center;
+    padding-top: 19px;
+	font-size:30px;
+	color:white;
+}
+a.fa.fa-linkedin {
+    color: white;
+    /* margin-left: -64px; */
+}
+
+a.fa.fa-github {
+    color: white;
+    /* margin-left: -64px; */
+}
+
+h2{
+text-align: center;
+    color: #f4511e;
+}
+.cret{
+text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+}
+input#fname {
+	border-radius: 3px;
+    border: 2px solid #f4511e;
+    width: 100%;
+    height: 28px;
+    font-size: 25px;
+    /* margin-top: -24px; */
+    max-width: 600px;
+    margin: auto;
+    display: block;
+    height: 56px;
+}
+
+label {
+	color: #f4511e;
+    text-align: left;
+    width: 100%;
+    font-size: 24px;
+    max-width: 600px;
+    margin: auto;
+    display: block;
+    padding-left: 12px;
+}
+
+
+@media (max-width: 767px){	
+	form input{
+		width: 100% !important;
+		margin-left: 0px !important;
+		height: 56px !important;
+		display: block;
+		margin-top: 10px;
+		max-width: 550px;
+		margin: auto !important;
+	}
+
+
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class='header'>
+<h3 >Bank Authenticator Application By Using Machine Learning </h3>
+<p >Artifical Intelligence play most important role in the the field of Banking and Finance.Artificial Intelligence is to make computers more useful in solving problematic in Banking Area and Finance</p>
+
+</p>
+</div>
+
+<div class="container">
+  <form  action="{{ url_for('predict')}}"method="post">
+    <label for="fname">Variance</label><br>
+    <input type="text" id="fname" name="variance" required="required" placeholder='Enter Number'><br>
+
+    <label for="lname">Skewness</label><br>
+    <input type="text" id="fname" name="skewness"    required="required" placeholder='Enter Number'><br>
+	    <label for="fname">Curtosis</label><br>
+    <input type="text" id="fname"  name="curtosis"   required="required" placeholder='Enter Number'><br>
+
+    <label for="lname">Entropy</label><br>
+    <input type="text" id="fname" name="entropy"  required="required" placeholder='Enter Number'><br>
+
+   
+       
+   
+   
+  
+    <input type="submit" value="Predict" id='fname'>
+  </form><br><br>
+  <h2>
+  {{ prediction_text }}
+  </h2>
+</div>
+<div class='footer'>
+<a href="https://www.linkedin.com/in/syed-hamza-jamil-rock12/" class="fa fa-linkedin"></a>
+<a href="https://github.com/Hamza-Jamil121/Bank-Note-Authentication" class="fa fa-github"></a><br>
+<a href='#' class='cret'> Developed By: Syed Hamza</a>
+</div>
+
+</body>
+</html>
